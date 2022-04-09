@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Javilo Minis</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+  </head>
+  <body>
+    <header class="parallax">
+      <div class="slideshow-container parallax__layer parallax__layer--base" >
+
+        <div class="mySlides">
+          <img src="img/header_mini1.png" alt="Mini1" class="header_img" >
+        </div>
+
+        <div class="mySlides">
+          <img src="img/header_mini2.png" alt="mini2" class="header_img" >
+        </div>
+
+        <div class="mySlides">
+          <img src="img/header_mini3.png" alt="mini3" class="header_img">
+        </div>
+
+        <div class="arrows">
+          <span class="material-icons-outlined" id="left-arrow" onclick="moveBack()">arrow_back_ios</span>
+          <span class="material-icons-outlined" id="right-arrow" onclick="moveForward()">arrow_forward_ios</span>
+        </div>
+
+        <div class="dots">
+          <span class="dot" onclick="current(0)"></span>
+          <span class="dot" onclick="current(1)"></span>
+          <span class="dot" onclick="current(2)"></span>
+        </div>
+
+
+      </div>
+      <div class="slideshow-container parallax__layer parallax__layer--back">
+      <h1 >Welcome to Javilo Minis </h1>
+      <div class="boldText">This page was created to show you a bit of my world: Warhammer Minis world. </br>
+        I invite you to click through the gallery. </br> Feel free to contact me. </div>
+      </div>
+    </header>
+    <section>
+      <h2 > Portfolio </h2>
+      <img src="img/header_mini3.png" alt="mini3" class="imgSmall">
+    </section>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+  </html>
