@@ -114,6 +114,18 @@ function showSlidesLightbox(n) {
 
 }
 
+
+
+//Paralax effect
+let welcomeText = document.getElementById("welcome");
+let paralaxPictures = document.getElementById("slideshow-cont");
+
+window.addEventListener('scroll', function(){
+  var value = window.scrollY;
+  welcomeText.style.top = -value * 0.5 + 'px';
+  paralaxPictures.style.top = value * 0.2 + 'px';
+})
+
 // Portfolio image animations
 // Remove the transition class
 /*
