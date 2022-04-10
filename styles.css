@@ -11,8 +11,66 @@
   font-family: 'Mukta', sans-serif;
 }
 header, section {
+
   width: 100vw;
   height: 100vh;
+}
+
+nav, footer {
+  display: flex;
+  overflow: hidden;
+  background-color: rgba(17, 19, 24, 0.9);
+  z-index: 1;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 70px;
+
+}
+.content {
+  height: 100%;
+}
+
+.title {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  background-color: transparent;
+}
+nav ul, footer ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+nav ul li, footer ul li{
+  position: relative;
+  list-style: none;
+  background-color: transparent;
+}
+nav ul li a, footer ul li a{
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  background-color: transparent;
+
+}
+footer span, footer span a {
+  background: transparent;
 }
 section {
   margin: auto;
@@ -24,6 +82,7 @@ h1, h2 {
 }
 h1 {
   font-size: 40px;
+
 
 }
 h2 {
@@ -56,12 +115,7 @@ h2 {
   transform: translateZ(-1px) scale(2) translateY(30vh);
 }
 
-.imgSmall {
-  width: 100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 .mySlides {
   display: none;
@@ -104,37 +158,192 @@ h2 {
 }
 
 .arrows {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0%;
   background-color: transparent;
 }
-#left-arrow {
+.left-arrow {
+  display: flex;
   position: absolute;
+  left: 0px;
   height: 100%;
+  align-items:center;
   width: 30%;
-  text-align: left;
-  padding: 35vh 0px 35vh 30px;
-  left:0%;
-
+  padding-left: 30px;
   background-color: transparent;
-
 }
 
-#right-arrow {
+.right-arrow {
+  display: flex;
   position: absolute;
+  right:0px;
+  padding-right: 30px;
   height: 100%;
+  align-items:center;
   width: 30%;
-  text-align: right;
-  padding: 35vh 30px 35vh 0px;
-  right:0%;
+  justify-content:right;
   background-color: transparent;
 }
 
-#right-arrow:hover, #left-arrow:hover, .dot:hover {
+.right-arrow:hover, .left-arrow:hover, .dot:hover {
   cursor: pointer;
 }
+
+/* Portfolio*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:center;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 7px;
+}
+
+.column .img_container {
+  margin-top: 14px;
+}
+
+.column .portfolio_img {
+  margin-top: 0px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*modal images*/
+.portfolio_img {
+  cursor: zoom-in;
+  transition: 0.3s;
+}
+
+.img_container{
+  background-color: white;
+}
+
+.portfolio_img:hover {
+  opacity: 0.7;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: left;
+  align-self: center;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightboxSlides img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  max-height: 90vh;
+  max-width: 90vw;
+}
+
+
+
+
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+
+  font-size: 35px;
+  font-weight: bold;
+
+  display: flex;
+
+  height: 100%;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 30px;
+  background-color: transparent;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.lightboxSlides {
+  display: none;
+}
+
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+}
+
+
+
+
+footer {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  height: 100px;
+
+}
+
+footer span a {
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
 /*#left-arrow:hover {
   background-color: gray;
 
@@ -155,5 +364,29 @@ h2 {
 #left-arrow {
   position: absolute;
   left: 50%;
+}
+
+
+//fading of the image
+
+
+.portfolio_img {
+  cursor: zoom-in;
+  opacity: 0;
+  transition: 0.3s;
+  transform: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio_img  {
+    transition: opacity 1s ease, transform 1s ease;
+  }
+}
+.portfolio_img_transition {
+  opacity: 1;
+  transform: none;
+}
+
+.img_container{
+  background-color: white;
 }
 */
