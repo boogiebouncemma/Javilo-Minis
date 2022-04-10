@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
 
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Mukta:wght@200&family=Oswald&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #111318;
+
   color: white;
   font-family: 'Mukta', sans-serif;
+  font-size: 17px;
+}
+body {
+  background-color: #111318;
 }
 header, section {
 
@@ -48,85 +52,76 @@ nav, footer {
   font-family: 'Oswald', sans-serif;
   font-size: 35px;
   font-weight: bold;
-  background-color: transparent;
+
 }
 nav ul, footer ul {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+
 }
 nav ul li, footer ul li{
   position: relative;
   list-style: none;
-  background-color: transparent;
+
 }
 nav ul li a, footer ul li a{
   position: relative;
   margin: 0 15px;
   text-decoration: none;
-  background-color: transparent;
+
 
 }
-footer span, footer span a {
-  background: transparent;
-}
+
 section {
   margin: auto;
 }
-h1, h2 {
+h1 {
   font-family: 'Oswald', sans-serif;
-  padding-top: 20px;
   padding-bottom: 5px;
+
+
 }
+
 h1 {
   font-size: 40px;
 
-
 }
-h2 {
-  font-size: 35px;
-}
-
-.parallax {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 1px;
-  perspective: 1px;
-}
-
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.parallax__layer--base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-.parallax__layer--back {
-  -webkit-transform: translateZ(-1px) scale(2);
-  transform: translateZ(-1px) scale(2) translateY(30vh);
-}
-
 
 
 .mySlides {
   display: none;
+}
+
+.paralax-contrainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* Slideshow container */
 .slideshow-container {
   position: relative;
   width: 100vw;
   height: 70vh;
+}
+.welcome-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+  z-index: 1;
+  background-color: rgba(17, 19, 24, 0.7);
 
 }
+
 
 .header_img {
   position: absolute;
@@ -141,7 +136,7 @@ h2 {
   position: absolute;
   width: 100%;
   bottom: 10px;
-  background-color: transparent;
+
 }
 .dot {
   height: 15px;
@@ -157,9 +152,7 @@ h2 {
   background-color: #bbb;
 }
 
-.arrows {
-  background-color: transparent;
-}
+
 .left-arrow {
   display: flex;
   position: absolute;
@@ -168,7 +161,7 @@ h2 {
   align-items:center;
   width: 30%;
   padding-left: 30px;
-  background-color: transparent;
+
 }
 
 .right-arrow {
@@ -180,7 +173,7 @@ h2 {
   align-items:center;
   width: 30%;
   justify-content:right;
-  background-color: transparent;
+
 }
 
 .right-arrow:hover, .left-arrow:hover, .dot:hover {
@@ -298,7 +291,7 @@ h2 {
   align-items: flex-start;
   justify-content: flex-end;
   padding-right: 30px;
-  background-color: transparent;
+
 }
 
 .close:hover,
@@ -322,7 +315,6 @@ h2 {
   padding: 8px 12px;
   position: absolute;
   top: 0;
-  background-color: transparent;
 }
 
 
@@ -330,7 +322,7 @@ h2 {
 
 footer {
   position: relative;
-  background-color: transparent;
+
   width: 100%;
   height: 100px;
 
