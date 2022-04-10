@@ -199,20 +199,17 @@ h1 {
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 428px) and (max-height: 926px) and (-webkit-device-pixel-ratio: 3){
-  * {
-    font-size: 40px;
+@media screen and (max-width: 428px) {
+  *{
+    font-size: 15px;
   }
   .column {
     flex: 100%;
     max-width: 100%;
   }
-  h1 {
-    font-size: 70px;
-  }
 
   .title {
-    font-size: 60px;
+    font-size: 20px;
   }
 
 }
