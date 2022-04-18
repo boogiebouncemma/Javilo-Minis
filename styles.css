@@ -38,7 +38,7 @@ nav, footer {
 }
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
-  padding-top: 72px;
+  padding-top: 71px;
 }
 
 .content {
@@ -221,7 +221,7 @@ h1 {
     max-height: 70vh;
   }
   .sticky + .content {
-    padding-top: 50px;
+    padding-top: 49px;
   }
 
 
