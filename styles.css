@@ -29,6 +29,7 @@ nav, footer {
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
+
 }
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
@@ -198,33 +199,6 @@ h1 {
   vertical-align: middle;
   width: 100%;
 }
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 428px) {
-  *{
-    font-size: 15px;
-  }
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-
-  .title {
-    font-size: 20px;
-  }
-  .lightboxSlides img, .modal-content {
-    max-height: 70vh;
-  }
-  .sticky + .content {
-    padding-top: 49px;
-  }
-}
 
 
 /*modal images*/
@@ -322,43 +296,87 @@ footer span a {
   font-weight: bold;
   font-style: italic;
 }
-/* Contact page css */
-#footer_contact {
-  position: absolute;
-  bottom: 0px;
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
 }
-.row-ci {
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 428px) {
+  *{
+    font-size: 15px;
+  }
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+  .lightboxSlides img, .modal-content {
+    max-height: 70vh;
+  }
+  .sticky + .content {
+    padding-top: 49px;
+  }
+  footer {
+    height: 70px;
+  }
+}
+
+
+/* Contact page css */
+#navbar-ci {
+  position: fixed;
+  top: 0px;
+}
+#contact-info {
+  position: relative;
+  margin-top: 72px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content:space-evenly;
   align-items: center;
-  margin: 0 4px;
-  background-color: green;
+  min-height: calc(100vh - 72px - 100px); /*72 is navbar, 100 is footer*/
+  width: 100vw;
 }
 
 .double-column-ci {
-  flex:60%;
+  flex: 60%;
   max-width: 60%;
-  background-color: red;
-  margin: 0 7px;
+  align-self: center;
 }
+
 .column-ci {
   flex: 30%;
   max-width: 30%;
-  margin: 0 7px;
-  background-color: blue;
 }
+
 .column-ci .profile_img {
   vertical-align: middle;
   width: 100%;
 }
+
+.text-standout {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 428px) {
+  #contact-info {
+    margin-top: 50px;
+    min-height: calc(100vh - 50px - 70px);
+  }
   .double-column-ci, .column-ci {
     flex: 100%;
     max-width: 100%;
   }
   .column-ci .profile_img  {
-    width: 50%;
+    width: 70%;
   }
-  }
+}
