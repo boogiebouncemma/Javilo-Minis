@@ -5,14 +5,11 @@
     <title>Javilo Minis</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/fcc6ae58ce.js" crossorigin="anonymous"></script>
-
-
   </head>
+
   <body>
-
-        <header class="paralax-container">
+        <header class="paralax-container" id="header">
           <div class="slideshow-container" id="slideshow-cont" >
-
             <div class="mySlides">
               <img src="img/header_mini1.png" alt="Mini1" class="header_img" >
             </div>
@@ -41,25 +38,19 @@
             <div class="boldText">
               I am an amateur miniature painter </br>
               I invite you to click through the gallery and contact me in case of any inquiries
-
             </div>
           </div>
         </header>
 
         <nav id="navbar">
-          <a href="#" class="title">Javilo Minis</a>
+          <a href="#header" class="title">Javilo Minis</a>
           <ul>
-            <li> <a href="#">Work</a></li>
-            <li> <a href="#">Contact</a></li>
+            <li> <a href="#portfolio">Portfolio</a></li>
+            <li> <a href="contact.html">Contact</a></li>
           </ul>
         </nav>
 
-        <!-- <section>
-          <h2 > Portfolio </h2>
-          <img src="img/header_mini3.png" alt="mini3" class="imgSmall">
-        </section> -->
-
-        <section class="content">
+        <section class="content" id="portfolio">
           <div class="row">
             <div class="column">
               <div class="img_container"><img src="img/header_mini1.png" class="portfolio_img " onclick="openModal();currentSlide(1)"></div>
@@ -84,7 +75,36 @@
             </div>
           </div>
         </section>
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
 
+            <div class="lightboxSlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="img/header_mini1.png">
+            </div>
+
+            <div class="lightboxSlides">
+              <div class="numbertext">2 / 4</div>
+              <img src="img/header_mini2.png" >
+            </div>
+
+            <div class="lightboxSlides">
+              <div class="numbertext">3 / 4</div>
+              <img src="img/header_mini3.png" >
+            </div>
+
+            <div class="lightboxSlides">
+              <div class="numbertext">4 / 4</div>
+              <img src="img/Portfolio_mini1.png" >
+            </div>
+            <div class="arrows">
+              <span class="material-icons-outlined left-arrow" onclick="plusSlides(-1)">arrow_back_ios</span>
+              <span class="material-icons-outlined right-arrow" onclick="plusSlides(1)">arrow_forward_ios</span>
+            </div>
+          </div>
+        </div>
         <footer >
           <span>Website created by <a href="https://github.com/boogiebouncemma/" target="_blank" >Boogie</a></span>
           <ul>
@@ -94,40 +114,7 @@
 
         </footer>
 
-
-          <!-- The Modal/Lightbox -->
-          <div id="myModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-
-              <div class="lightboxSlides">
-                <div class="numbertext">1 / 4</div>
-                <img src="img/header_mini1.png">
-              </div>
-
-              <div class="lightboxSlides">
-                <div class="numbertext">2 / 4</div>
-                <img src="img/header_mini2.png" >
-              </div>
-
-              <div class="lightboxSlides">
-                <div class="numbertext">3 / 4</div>
-                <img src="img/header_mini3.png" >
-              </div>
-
-              <div class="lightboxSlides">
-                <div class="numbertext">4 / 4</div>
-                <img src="img/Portfolio_mini1.png" >
-              </div>
-              <div class="arrows">
-                <span class="material-icons-outlined left-arrow" onclick="plusSlides(-1)">arrow_back_ios</span>
-                <span class="material-icons-outlined right-arrow" onclick="plusSlides(1)">arrow_forward_ios</span>
-              </div>
-            </div>
-          </div>
-
-
-
     <script src="app.js" charset="utf-8"></script>
+    <script src="navbar.js" charset="utf-8"></script>
   </body>
-  </html>
+</html>
