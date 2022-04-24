@@ -119,6 +119,48 @@ window.addEventListener('scroll', function(){
   paralaxPictures.style.top = value * 0.3 + 'px';
 })
 
+//Show images on scroll
+const callback = function(entries) {
+  entries.forEach(entry => {
+      entry.target.classList.toggle("showImg", entry.isIntersecting);
+      if (entry.isIntersecting) observer.unobserve(entry.target)
+    }
+  );
+};
 
+const observer = new IntersectionObserver(callback,
+  {
+    threshold: 0.3, //how much of the object is visible in %
+    //rootMargin: "-50px" //how much of the object is visible in px
+  }
+);
+
+const targets = document.querySelectorAll(".show-on-scroll");
+
+targets.forEach(target => {
+  observer.observe(target);
+});
+
+
+
+
+/*
+var imgScroll = window.requestAnimationFrame ||
+                function(callback) {window.setTimeout(callback, 1000/60)};
+
+var elementsToShow = document.querySelectorAll('.portfolio_img');
+function loopIsVisible() {
+  elementsToShow.forEach(function (element) {
+    if (isElementInViewport(element) {
+      element.classList.add('is-visible');
+    } else {
+      element.classList.remove('is-visible');
+    }
+  });
+  imgScroll(loopIsVisible);
+}
+
+loopIsVisible();
+*/
 showSlides();
 showSlidesLightbox();
